@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detalhes.css">
+    <title>Document</title>
+</head>
+<%- include('./partials/header.ejs') %> 
+<body>
+    <main>
+            
+        <div class="container-video">
+            <iframe src="https://www.youtube.com/embed/<%= song.url %> " frameborder="0"></iframe>
+            <span> <h2> Álbum: <%= song.banda %> <br> Música <%= song.musicas %>  </h2> </span>
+            <span> <h3> Ano de lançamento: <%= song.ano %>  </h3> </span>
+            <span><h4> Autoria de: <%= song.creditos %>  </h4> </span>
+            
+
+        </div>
+            
+        <div class="btn-container">
+            <a href="/delete/<%= song.id %> ">
+                 <img class="delete-icon" src="/img/delete.png" alt="delete icon">
+            </a>
+            <a href="/editar/<%= song.id %> ">
+                 <img class="edit-icon" src="/img/edit.png" alt="editar">
+            </a>
+         </div>
+
+    </main>
+    
+</body>
+</html>

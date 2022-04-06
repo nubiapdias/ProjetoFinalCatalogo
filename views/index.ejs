@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<%- include('./partials/header.ejs') %>
+
+<body>
+    <body>
+        <h1></h1>
+        <main class="maincard">
+            <% musicas.forEach(element => { %>
+            <a href="/detalhes/<%= element.id %> ">
+             <div class="cardContainer">
+                <div class="container-img">
+                        <img src="<%= element.img %> " alt="">
+                </div>
+            </a>
+                    <div class="container-show">
+                    <span> <%= element.banda %> </span>
+                </div>
+            </div>
+            <% }) %>
+        </main>
+    </body>
+
+</html>

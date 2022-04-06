@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detalhes.css">
+    <title> Criar </title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <div class="container-form">
+        <form action="/editar/<%= musicas.id %>" method="post">
+            <legend> Editar <%= musicas.banda %>  </legend>
+
+            <div class="box">
+        <div class="inpux-box">
+            <fieldset class="nome">
+                <input type="text" name="banda" placeholder="Nome da banda ou artista" value="<%= musicas.banda %> ">
+                <label for="banda"> </label>
+            </fieldset>
+        </div>
+
+        <div class="inpux-box">
+            <fieldset class="img">
+                <input type="url" name="img" placeholder="link da imagem do álbum" value="<%= musicas.img %> ">
+                <label for="img"> </label>
+            </fieldset>
+        </div>
+            
+        <div class="inpux-box">    
+            <fieldset class="number">
+                <input type="number" name="ano" placeholder="ano de lançamento" value="<%= musicas.ano %>">
+                <label for="ano"> </label>
+            </fieldset>
+        </div>
+          
+        <div class="inpux-box">    
+            <fieldset class="url">
+                <input type="text" name="url" placeholder="iframe da música" value="<%= musicas.url %> ">
+                <label for="url"> incorpore o iframe de sua música sem aspas ou a tag </label>
+            </fieldset>
+        </div>
+
+        <div class="inpux-box">
+            <fieldset class="album">
+                <input type="text" name="album" placeholder="Álbum" value=" <%= musicas.album %> ">
+                <label for="album"> </label>
+            </fieldset>
+        </div>
+
+        <div class="inpux-box">
+            <fieldset class="creditos">
+                <input type="text" name="creditos" placeholder="Banda e Gravadora" value="<%= musicas.creditos %>">
+                <label for="creditos"> </label>
+            </fieldset>
+        </div>
+
+    </div>
+            <div class="button">
+                <input type="submit" value="enviar">
+            </div>
+        </form>
+    </div>
+    </main>
+</body>
+</html>
